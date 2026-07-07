@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Yorum Yönetimi | LokasyON Şimşek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white' stroke='%2378be20' stroke-width='4'/%3E%3Cpath d='M50 12 C32 12 18 26 18 44 C18 60 34 75 46 86 C48 88 52 88 54 86 C66 75 82 60 82 44 C82 26 68 12 50 12 Z' fill='none' stroke='%23222222' stroke-width='6'/%3E%3Cpath d='M32 32 C43 30 50 38 49 48 C38 49 31 42 32 32 Z' fill='%2378be20'/%3E%3Cpath d='M68 30 C57 29 51 36 52 46 C63 47 69 40 68 30 Z' fill='%232e7d32'/%3E%3C/svg%3E">
+  <style>
+    body { background: var(--bg-cream); }
+    .admin-wrap { width: min(860px, 94%); margin: 0 auto; padding: 2.5rem 0 5rem; }
+    .admin-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .admin-head h1 { font-size: 1.5rem; font-weight: 800; }
+    .admin-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.8rem; box-shadow: var(--shadow-sm); margin-bottom: 1.4rem; }
+    .admin-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.9rem; }
+    .token-row { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+    .token-row input { flex: 1; min-width: 220px; font-family: var(--font); font-size: 0.9rem; border: 1.5px solid var(--line); border-radius: 12px; padding: 0.75em 1em; background: var(--bg-cream); }
+    .token-row input:focus { outline: none; border-color: var(--green); }
+    .token-help { margin-top: 0.9rem; font-size: 0.85rem; color: var(--muted); }
+    .token-help summary { cursor: pointer; font-weight: 600; color: var(--green-dark); }
+    .token-help ol { margin: 0.6rem 0 0 1.2rem; display: grid; gap: 0.3rem; }
+    .token-help a { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
+    .yorum-item { border: 1px solid var(--line); border-radius: 14px; padding: 1.2rem 1.3rem; margin-bottom: 1rem; background: var(--bg-cream); }
+    .yorum-item .form-row3 { display: grid; grid-template-columns: 1.4fr 1.4fr 0.7fr 0.7fr; gap: 0.7rem; margin-bottom: 0.7rem; }
+    .yorum-item label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--muted); margin-bottom: 0.25rem; }
+    .yorum-item input, .yorum-item select, .yorum-item textarea { width: 100%; font-family: var(--font); font-size: 0.88rem; border: 1.5px solid var(--line); border-radius: 10px; padding: 0.6em 0.8em; background: #fff; }
+    .yorum-item input:focus, .yorum-item select:focus, .yorum-item textarea:focus { outline: none; border-color: var(--green); }
+    .yorum-item textarea { resize: vertical; }
+    .yorum-tools { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 0.7rem; }
+    .tool-btn { border: 1.5px solid var(--line); background: #fff; border-radius: 10px; padding: 0.4em 0.9em; font-family: var(--font); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+    .tool-btn:hover { border-color: var(--green); color: var(--green-dark); }
+    .tool-btn.danger:hover { border-color: #d64545; color: #d64545; }
+    .admin-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+    .status { margin-top: 1rem; font-size: 0.9rem; font-weight: 600; padding: 0.8em 1.1em; border-radius: 12px; display: none; }
+    .status.ok { display: block; background: #ecf7dd; color: var(--green-dark); }
+    .status.err { display: block; background: #fde5e5; color: #c03434; }
+    .status.info { display: block; background: #e3f3fa; color: #1d7fae; }
+    .status a { text-decoration: underline; }
+    .muted-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.8rem; }
+    @media (max-width: 640px) { .yorum-item .form-row3 { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="admin-wrap">
+    <div class="admin-head">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 100 100"><path d="M50 8 C31 8 15 24 15 43 C15 61 33 78 46 90 C48.4 92 51.6 92 54 90 C67 78 85 61 85 43 C85 24 69 8 50 8 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/><path d="M31 31 C42 29 50 37 49 48 C38 49 30 42 31 31 Z" fill="#78be20"/><path d="M69 29 C58 28 51 36 52 47 C63 48 70 40 69 29 Z" fill="#2e7d32"/><path d="M50 66 C49 57 54 50 63 51 C64 60 58 66 50 66 Z" fill="#4a9427"/></svg>
+        </span>
+        <span class="brand-text">Lokasy<em>ON</em> Şimşek</span>
+      </a>
+      <h1>⚙️ Yorum Yönetim Paneli</h1>
+    </div>
+
+    <div class="admin-card">
+      <h2>1️⃣ GitHub Bağlantısı</h2>
+      <div class="token-row">
+        <input type="password" id="tokenInput" placeholder="GitHub erişim anahtarınızı (token) buraya yapıştırın" autocomplete="off">
+        <button class="btn btn-primary" id="connectBtn" type="button">Bağlan</button>
+        <button class="btn btn-ghost" id="disconnectBtn" type="button" style="display:none">Bağlantıyı Kes</button>
+      </div>
+      <details class="token-help">
+        <summary>🔑 Erişim anahtarı (token) nasıl alınır? — tek seferlik kurulum</summary>
+        <ol>
+          <li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a> adresine gidin (GitHub hesabınızla).</li>
+          <li>"Token name" kısmına <strong>yorum-paneli</strong> yazın; süreyi (Expiration) 1 yıl seçebilirsiniz.</li>
+          <li>"Repository access" altında <strong>Only select repositories</strong> → <strong>hasankkilic/Herbalife</strong> seçin.</li>
+          <li>"Permissions → Repository permissions → <strong>Contents</strong>" iznini <strong>Read and write</strong> yapın.</li>
+          <li>"Generate token" deyin ve çıkan <code>github_pat_...</code> ile başlayan anahtarı kopyalayıp yukarıya yapıştırın.</li>
+        </ol>
+        <p style="margin-top:0.6rem">⚠️ Anahtar yalnızca bu tarayıcıda saklanır, kimseyle paylaşmayın. Anahtarın ait olduğu hesabın bu repoda yazma yetkisi olmalıdır.</p>
+      </details>
+      <div class="status" id="connStatus"></div>
+    </div>
+
+    <div class="admin-card">
+      <h2>2️⃣ Yorumlar</h2>
+      <div id="yorumList"><p class="muted-note">Yorumlar yükleniyor…</p></div>
+      <div class="admin-actions">
+        <button class="btn btn-outline" id="addBtn" type="button">+ Yeni Yorum Ekle</button>
+        <button class="btn btn-primary" id="saveBtn" type="button">💾 Kaydet ve Yayınla</button>
+      </div>
+      <div class="status" id="saveStatus"></div>
+      <p class="muted-note">Kaydettikten sonra değişikliklerin sitede görünmesi 1-2 dakika sürebilir (GitHub Pages yayını). Sıralamayı ↑ ↓ butonlarıyla değiştirebilirsiniz; en üstteki yorum sitede ilk gösterilir.</p>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

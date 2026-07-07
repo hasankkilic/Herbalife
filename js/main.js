@@ -83,18 +83,14 @@ const counterObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".stat-number").forEach((el) => counterObserver.observe(el));
 
 /* ---------- Yorum slaytı ---------- */
+/* Yorumlar data/yorumlar.json dosyasından yüklenir ve admin.html
+   üzerinden güncellenebilir. Dosya yüklenemezse (ör. internetsiz
+   yerel açılış) HTML içindeki gömülü yorumlar gösterilmeye devam eder. */
 const track = document.getElementById("testimonialTrack");
 const slides = track.children;
 const dotsWrap = document.getElementById("sliderDots");
 let currentSlide = 0;
 let autoTimer;
-
-for (let i = 0; i < slides.length; i++) {
-  const dot = document.createElement("button");
-  dot.setAttribute("aria-label", `Yorum ${i + 1}`);
-  dot.addEventListener("click", () => goToSlide(i));
-  dotsWrap.appendChild(dot);
-}
 
 function goToSlide(index) {
   currentSlide = (index + slides.length) % slides.length;
@@ -110,9 +106,46 @@ function restartAuto() {
   autoTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
 }
 
+function initSlider() {
+  dotsWrap.innerHTML = "";
+  for (let i = 0; i < slides.length; i++) {
+    const dot = document.createElement("button");
+    dot.setAttribute("aria-label", `Yorum ${i + 1}`);
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  }
+  goToSlide(0);
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+}
+
 document.getElementById("prevSlide").addEventListener("click", () => goToSlide(currentSlide - 1));
 document.getElementById("nextSlide").addEventListener("click", () => goToSlide(currentSlide + 1));
-goToSlide(0);
+initSlider();
+
+fetch("data/yorumlar.json?v=" + Date.now(), { cache: "no-store" })
+  .then((r) => (r.ok ? r.json() : Promise.reject()))
+  .then((list) => {
+    if (!Array.isArray(list) || list.length === 0) return;
+    track.innerHTML = "";
+    list.forEach((y) => {
+      const q = document.createElement("blockquote");
+      q.className = "slide";
+      const stars = "★".repeat(Math.min(Math.max(parseInt(y.yildiz, 10) || 5, 1), 5));
+      q.innerHTML =
+        `<div class="stars">${stars}</div>` +
+        `<p>"${escapeHtml(y.yorum)}"</p>` +
+        `<footer><strong>${escapeHtml(y.ad)}</strong>` +
+        `<span>${escapeHtml(y.program)}${y.sure ? " • " + escapeHtml(y.sure) : ""}</span></footer>`;
+      track.appendChild(q);
+    });
+    initSlider();
+  })
+  .catch(() => {});
 
 /* ---------- Randevu formu → WhatsApp ---------- */
 document.getElementById("contactForm").addEventListener("submit", (e) => {

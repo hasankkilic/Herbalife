@@ -8,6 +8,8 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 | `css/style.css` | Tasarım ve renkler |
 | `js/main.js` | Menü, form, animasyonlar |
 | `js/calculator.js` | Kalori/BMI/makro hesaplama aracı |
+| `data/yorumlar.json` | Üye yorumları (admin panelinden yönetilir) |
+| `admin.html` + `js/admin.js` | Yorum yönetim paneli |
 
 ## 1. Güncel bilgiler (işlendi ✅)
 
@@ -22,7 +24,7 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 
 - **Çalışma saatleri:** `09.00 – 20.00` yazan yerleri aratın.
 - **İstatistikler (500+ üye, 8+ yıl vb.):** `index.html` içinde `data-count="500"` gibi değerleri gerçek rakamlarla değiştirin.
-- **Üye yorumları:** `id="testimonialTrack"` bölümündeki yorumları gerçek üye yorumlarıyla değiştirin (izin alarak!).
+- **Üye yorumları:** Kod bilgisi GEREKMEZ — sitedeki `admin.html` sayfasını açın (ör. `siteadresi/admin.html`). İlk kullanımda sayfadaki adımları izleyerek GitHub erişim anahtarı oluşturup yapıştırın; sonrasında yorum ekleme/silme/düzenleme/sıralama tamamen paneldendir. "Kaydet ve Yayınla" düğmesi değişikliği doğrudan GitHub'a işler, site 1-2 dakikada güncellenir. (Yorumları yayınlarken üyeden izin almayı unutmayın.)
 - **Fotoğraflar:** Şu an Unsplash'ten ücretsiz stok fotoğraflar kullanılıyor. Kendi fotoğraflarınızı kullanmak için proje içine `img` klasörü açıp fotoğrafları oraya koyun, sonra `index.html` içindeki `https://images.unsplash.com/...` adreslerini `img/dosyaadi.jpg` ile değiştirin. **Kendi mekân ve etkinlik fotoğraflarınız siteyi çok daha inandırıcı yapar — şiddetle tavsiye edilir.**
 - **Renkler:** `css/style.css` dosyasının en üstündeki `:root` bölümünden tüm renkleri tek yerden değiştirebilirsiniz.
 - **Hesaplama aracı:** "Hesaplama" bölümü ziyaretçinin BMI, günlük kalori (Mifflin-St Jeor formülü) ve makro ihtiyacını hesaplar; "Sonuçlarımı WhatsApp'tan Gönder" butonu sonuçları doğrudan size iletir — yani araç aynı zamanda müşteri kazanma kanalıdır. Formüller `js/calculator.js` içindedir; grafik için Chart.js internetten (CDN) yüklenir, ekstra kurulum gerekmez.
