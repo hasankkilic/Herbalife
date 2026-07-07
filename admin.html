@@ -56,6 +56,17 @@
       <h1>⚙️ Yorum Yönetim Paneli</h1>
     </div>
 
+    <div class="admin-card" id="lockScreen">
+      <h2>🔒 Panel Kilidi</h2>
+      <p class="muted-note" style="margin:0 0 1rem">Bu sayfa yalnızca yetkili kişiler içindir. Devam etmek için panel şifresini girin.</p>
+      <div class="token-row">
+        <input type="password" id="passInput" placeholder="Panel şifresi" autocomplete="current-password">
+        <button class="btn btn-primary" id="unlockBtn" type="button">Giriş</button>
+      </div>
+      <div class="status" id="lockStatus"></div>
+    </div>
+
+    <div id="panelContent" hidden>
     <div class="admin-card">
       <h2>1️⃣ GitHub Bağlantısı</h2>
       <div class="token-row">
@@ -86,6 +97,7 @@
       </div>
       <div class="status" id="saveStatus"></div>
       <p class="muted-note">Kaydettikten sonra değişikliklerin sitede görünmesi 1-2 dakika sürebilir (GitHub Pages yayını). Sıralamayı ↑ ↓ butonlarıyla değiştirebilirsiniz; en üstteki yorum sitede ilk gösterilir.</p>
+    </div>
     </div>
   </div>
 

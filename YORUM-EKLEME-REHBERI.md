@@ -11,7 +11,13 @@ Kod bilgisi gerekmez; her şey panel üzerinden yapılır.
 | ⚙️ Yorum Paneli | https://hasankkilic.github.io/Herbalife/admin.html |
 
 > Panel adresini telefonunuzun/bilgisayarınızın yer imlerine (favorilere) ekleyin.
-> Bu adresi müşterilerle paylaşmayın — sayfa şifresiz açılır ama anahtarsız kimse kayıt yapamaz.
+> Bu adresi müşterilerle paylaşmayın.
+
+## 🔒 Panel şifresi
+
+Panel açıldığında önce **panel şifresi** sorulur. Şifreyi site sahibinden öğrenin
+(güvenlik nedeniyle bu belgede yazmıyor). Şifre bir kez girildikten sonra aynı
+telefon/bilgisayarda bir daha sorulmaz.
 
 ---
 

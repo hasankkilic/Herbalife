@@ -9,6 +9,12 @@ const FILE_PATH = "data/yorumlar.json";
 const BRANCH = "main";
 const TOKEN_KEY = "ls_gh_token";
 
+/* Panel şifresinin SHA-256 özeti (şifrenin kendisi kodda yer almaz).
+   Şifreyi değiştirmek için: yeni şifrenin SHA-256 özetini hesaplayıp
+   aşağıdaki değeri güncelleyin (ör. https://emn178.github.io/online-tools/sha256.html). */
+const PASS_HASH = "de1bd3ea4471744db798a3fad55038657a3b90ee3f0f3b7e7cfa87dbdf4422bb";
+const PASS_KEY = "ls_admin_unlocked";
+
 let yorumlar = [];
 let fileSha = null;
 
@@ -210,6 +216,48 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
   }
 });
 
+/* ---------- Şifre kilidi ---------- */
+const lockScreen = document.getElementById("lockScreen");
+const panelContent = document.getElementById("panelContent");
+const passInput = document.getElementById("passInput");
+const lockStatus = document.getElementById("lockStatus");
+
+async function sha256Hex(s) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function unlockPanel() {
+  lockScreen.hidden = true;
+  panelContent.hidden = false;
+  refreshConnUi();
+  loadYorumlar();
+}
+
+async function tryUnlock() {
+  const val = passInput.value;
+  if (!val) return;
+  if (!window.crypto || !crypto.subtle) {
+    setStatus(lockStatus, "err", "❌ Tarayıcı desteklemiyor; sayfayı https adresinden açın.");
+    return;
+  }
+  if ((await sha256Hex(val)) === PASS_HASH) {
+    localStorage.setItem(PASS_KEY, PASS_HASH);
+    unlockPanel();
+  } else {
+    passInput.value = "";
+    setStatus(lockStatus, "err", "❌ Şifre yanlış, tekrar deneyin.");
+  }
+}
+
+document.getElementById("unlockBtn").addEventListener("click", tryUnlock);
+passInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") tryUnlock();
+});
+
 /* ---------- Başlat ---------- */
-refreshConnUi();
-loadYorumlar();
+if (localStorage.getItem(PASS_KEY) === PASS_HASH) {
+  unlockPanel();
+} else {
+  passInput.focus();
+}
