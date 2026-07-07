@@ -20,7 +20,6 @@ const listEl = document.getElementById("yorumList");
 const saveStatus = document.getElementById("saveStatus");
 
 const utf8ToB64 = (s) => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
-const b64ToUtf8 = (b) => new TextDecoder().decode(Uint8Array.from(atob(b), (c) => c.charCodeAt(0)));
 
 function getToken() {
   return localStorage.getItem(TOKEN_KEY) || "";
@@ -79,19 +78,27 @@ disconnectBtn.addEventListener("click", () => {
   refreshConnUi();
 });
 
-/* ---------- Yorumları yükle ---------- */
+/* ---------- Yorumları yükle ----------
+   Okuma raw.githubusercontent.com üzerinden yapılır (anahtar ve
+   istek limiti gerektirmez). Kaydetme sırasında dosyanın güncel
+   sha'sı anahtarla API'den alınır. */
 async function loadYorumlar() {
   try {
-    const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}&t=${Date.now()}`;
-    const res = await fetch(url, { headers: apiHeaders(), cache: "no-store" });
+    const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${FILE_PATH}?t=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error("Dosya okunamadı (HTTP " + res.status + ")");
-    const data = await res.json();
-    fileSha = data.sha;
-    yorumlar = JSON.parse(b64ToUtf8(data.content.replace(/\s/g, "")));
+    yorumlar = await res.json();
     renderList();
   } catch (e) {
     listEl.innerHTML = `<p class="muted-note">❌ Yorumlar yüklenemedi: ${e.message}. Sayfayı yenileyip tekrar deneyin.</p>`;
   }
+}
+
+async function fetchSha() {
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}&t=${Date.now()}`;
+  const res = await fetch(url, { headers: apiHeaders(), cache: "no-store" });
+  if (!res.ok) throw new Error("Dosya bilgisi alınamadı (HTTP " + res.status + ")");
+  return (await res.json()).sha;
 }
 
 /* ---------- Liste arayüzü ---------- */
@@ -174,6 +181,7 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
   }
   setStatus(saveStatus, "info", "⏳ Kaydediliyor…");
   try {
+    fileSha = await fetchSha();
     const body = {
       message: "Yorumlar guncellendi (yorum yonetim paneli)",
       content: utf8ToB64(JSON.stringify(yorumlar, null, 2) + "\n"),
