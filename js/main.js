@@ -3,7 +3,7 @@
    ÖNEMLİ: Aşağıdaki numarayı kendi WhatsApp numaranızla değiştirin.
    Format: ülke kodu + numara, başında + veya 0 OLMADAN.
    ============================================================ */
-const WHATSAPP_NUMBER = "905555555555";
+const WHATSAPP_NUMBER = "905550070269";
 
 /* ---------- Mobil menü ---------- */
 const navToggle = document.getElementById("navToggle");

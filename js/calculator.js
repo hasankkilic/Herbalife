@@ -158,7 +158,7 @@
     text += `🥩 Protein ${fmt(r.proteinG)} g • 🍚 Karbonhidrat ${fmt(r.carbG)} g • 🥑 Yağ ${fmt(r.fatG)} g\n\n`;
     text += "Bu sonuçları birlikte değerlendirmek ve ücretsiz vücut analizi randevusu almak istiyorum.";
 
-    const number = typeof WHATSAPP_NUMBER !== "undefined" ? WHATSAPP_NUMBER : "905555555555";
+    const number = typeof WHATSAPP_NUMBER !== "undefined" ? WHATSAPP_NUMBER : "905550070269";
     window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, "_blank");
   });
 })();

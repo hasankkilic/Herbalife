@@ -1,4 +1,4 @@
-# Şimşek Wellness — Site Düzenleme Rehberi
+# LokasyON Şimşek — Site Düzenleme Rehberi
 
 Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 
@@ -9,18 +9,14 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 | `js/main.js` | Menü, form, animasyonlar |
 | `js/calculator.js` | Kalori/BMI/makro hesaplama aracı |
 
-## 1. Mutlaka değiştirilmesi gerekenler
+## 1. Güncel bilgiler (işlendi ✅)
 
-### WhatsApp numarası (EN ÖNEMLİSİ)
-- `js/main.js` dosyasının en üstündeki `WHATSAPP_NUMBER = "905555555555"` satırını gerçek numarayla değiştirin (başında `+` veya `0` olmadan, `90` ile başlayacak şekilde). Randevu formu bu numaraya mesaj gönderir.
-- `index.html` içinde **Ctrl+H** (bul-değiştir) ile `905555555555` yazan her yeri gerçek numarayla değiştirin (WhatsApp butonları için).
-- Aynı şekilde `0 555 555 55 55` ve `+905555555555` yazan yerleri de değiştirin (görünen telefon ve arama linki).
+Şu bilgiler siteye işlenmiş durumdadır — değişirse aşağıdaki gibi güncelleyin:
 
-### Adres
-`index.html` içinde `Örnek Mah. Sağlık Cad. No: 12/A` yazan 2 yeri gerçek adresle değiştirin (İletişim bölümü + footer).
-
-### İşletme adı
-Site "Şimşek Wellness" adıyla hazırlandı. Değiştirmek isterseniz `index.html` içinde `Şimşek` kelimesini aratıp değiştirin.
+- **Telefon / WhatsApp: 0555 007 02 69** — değişirse `js/main.js` en üstündeki `WHATSAPP_NUMBER` satırını ve `index.html` içinde `905550070269` ile `0 555 007 02 69` yazan yerleri (Ctrl+H ile) değiştirin.
+- **Adres: Turgut Özal Mah. 2125. Cadde İntro Plaza No: 11, Batıkent/ANKARA** — değişirse `index.html` içinde aratıp değiştirin; İletişim bölümündeki Google Haritalar kutusunun adresi de `maps?q=...` satırındadır.
+- **Marka: LokasyON Şimşek** — logo, menü ve footer'da SVG olarak çizilidir; renkleri `css/style.css` üstündeki değişkenlerden ayarlanır.
+- **Çalışma düzeni:** Sabit saat yerine "Gelmeden önce lütfen arayın" notu kullanılıyor.
 
 ## 2. İsteğe bağlı düzenlemeler
 
