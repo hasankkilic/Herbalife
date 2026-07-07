@@ -29,14 +29,13 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 - **Renkler:** `css/style.css` dosyasının en üstündeki `:root` bölümünden tüm renkleri tek yerden değiştirebilirsiniz.
 - **Hesaplama aracı:** "Hesaplama" bölümü ziyaretçinin BMI, günlük kalori (Mifflin-St Jeor formülü) ve makro ihtiyacını hesaplar; "Sonuçlarımı WhatsApp'tan Gönder" butonu sonuçları doğrudan size iletir — yani araç aynı zamanda müşteri kazanma kanalıdır. Formüller `js/calculator.js` içindedir; grafik için Chart.js internetten (CDN) yüklenir, ekstra kurulum gerekmez.
 
-## 3. Siteyi internete koymak (ücretsiz)
+## 3. Yayın durumu
 
-En kolay yol — **Netlify Drop**:
-1. https://app.netlify.com/drop adresine gidin (ücretsiz üyelik).
-2. `mete` klasörünü olduğu gibi sayfaya sürükleyip bırakın.
-3. Site anında `xxx.netlify.app` adresinde yayında! İsterseniz kendi alan adınızı (ör. `simsekwellness.com`) bağlayabilirsiniz.
+Site **GitHub Pages ile yayında**: https://hasankkilic.github.io/Herbalife/
 
-Alternatifler: Vercel (vercel.com), GitHub Pages, ya da herhangi bir hosting firmasına dosyaları FTP ile yüklemek.
+- `main` dalına gönderilen (push edilen) her değişiklik 1-2 dakika içinde otomatik yayınlanır.
+- Yorum paneli: https://hasankkilic.github.io/Herbalife/admin.html — kullanımı için `YORUM-EKLEME-REHBERI.md` dosyasına bakın.
+- İleride kendi alan adınızı (ör. `lokasyonsimsek.com`) bağlamak isterseniz: repo → Settings → Pages → Custom domain.
 
 ## 4. Yasal not
 
