@@ -7,6 +7,7 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 | `index.html` | Tüm metinler ve içerik |
 | `css/style.css` | Tasarım ve renkler |
 | `js/main.js` | Menü, form, animasyonlar |
+| `js/calculator.js` | Kalori/BMI/makro hesaplama aracı |
 
 ## 1. Mutlaka değiştirilmesi gerekenler
 
@@ -28,6 +29,7 @@ Site "Şimşek Wellness" adıyla hazırlandı. Değiştirmek isterseniz `index.h
 - **Üye yorumları:** `id="testimonialTrack"` bölümündeki yorumları gerçek üye yorumlarıyla değiştirin (izin alarak!).
 - **Fotoğraflar:** Şu an Unsplash'ten ücretsiz stok fotoğraflar kullanılıyor. Kendi fotoğraflarınızı kullanmak için proje içine `img` klasörü açıp fotoğrafları oraya koyun, sonra `index.html` içindeki `https://images.unsplash.com/...` adreslerini `img/dosyaadi.jpg` ile değiştirin. **Kendi mekân ve etkinlik fotoğraflarınız siteyi çok daha inandırıcı yapar — şiddetle tavsiye edilir.**
 - **Renkler:** `css/style.css` dosyasının en üstündeki `:root` bölümünden tüm renkleri tek yerden değiştirebilirsiniz.
+- **Hesaplama aracı:** "Hesaplama" bölümü ziyaretçinin BMI, günlük kalori (Mifflin-St Jeor formülü) ve makro ihtiyacını hesaplar; "Sonuçlarımı WhatsApp'tan Gönder" butonu sonuçları doğrudan size iletir — yani araç aynı zamanda müşteri kazanma kanalıdır. Formüller `js/calculator.js` içindedir; grafik için Chart.js internetten (CDN) yüklenir, ekstra kurulum gerekmez.
 
 ## 3. Siteyi internete koymak (ücretsiz)
 
