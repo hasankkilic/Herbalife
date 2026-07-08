@@ -4,7 +4,8 @@
    İçerikler data/*.json dosyalarındadır ve resmi Herbalife
    Türkiye sitesinden araclar/icerik-guncelle.py ile çekilir.
    ============================================================ */
-const SAYFA = document.body.dataset.sayfa; // "sss" | "tarifler" | "makaleler"
+const SAYFA = document.body.dataset.sayfa; // "sss" | "tarifler" | "makaleler" | "hesaplama" | "iletisim"
+const WHATSAPP_NUMBER = "905550070269";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
@@ -122,6 +123,37 @@ if (SAYFA === "makaleler") {
     });
   });
 }
+
+/* ---------- İletişim: randevu formu → WhatsApp ---------- */
+if (SAYFA === "iletisim") {
+  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("fname").value.trim();
+    const phone = document.getElementById("fphone").value.trim();
+    const service = document.getElementById("fservice").value;
+    const msg = document.getElementById("fmsg").value.trim();
+
+    let text = `Merhaba, web sitenizden yazıyorum.\n\n`;
+    text += `👤 Ad Soyad: ${name}\n`;
+    text += `📞 Telefon: ${phone}\n`;
+    text += `🎯 İlgilendiğim hizmet: ${service}\n`;
+    if (msg) text += `📝 Mesaj: ${msg}\n`;
+    text += `\nRandevu almak istiyorum.`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+  });
+}
+
+/* ---------- Görünme animasyonu (.reveal) ---------- */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
 /* ---------- Ortak: mobil menü, menü gölgesi, yıl ---------- */
 const navToggle = document.getElementById("navToggle");

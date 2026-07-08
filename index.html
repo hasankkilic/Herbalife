@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white' stroke='%2378be20' stroke-width='4'/%3E%3Cpath d='M50 12 C32 12 18 26 18 44 C18 60 34 75 46 86 C48 88 52 88 54 86 C66 75 82 60 82 44 C82 26 68 12 50 12 Z' fill='none' stroke='%23222222' stroke-width='6'/%3E%3Cpath d='M32 32 C43 30 50 38 49 48 C38 49 31 42 32 32 Z' fill='%2378be20'/%3E%3Cpath d='M68 30 C57 29 51 36 52 46 C63 47 69 40 68 30 Z' fill='%232e7d32'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -50,11 +50,11 @@
       <nav class="nav-links" id="navLinks" aria-label="Ana menü">
         <a href="#anasayfa" class="active">Ana Sayfa</a>
         <a href="#hizmetler">Hizmetler</a>
-        <a href="#hesaplama">Hesaplama</a>
+        <a href="hesaplama.html">Hesaplama</a>
         <div class="nav-drop">
           <button class="nav-drop-btn" type="button">Herbalife <span class="drop-ok">▾</span></button>
           <div class="nav-drop-menu">
-            <a href="https://www.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">🛒 %15 İndirimli Satın Al ↗</a>
+            <a href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">🛒 %15 İndirimli Satın Al ↗</a>
             <a href="urunler.html">📦 Ürünler</a>
             <a href="tarifler.html">🥤 Tarifler</a>
             <a href="makaleler.html">📖 Makaleler</a>
@@ -64,10 +64,10 @@
         <a href="#is-firsati">İş Fırsatı</a>
         <a href="#hakkimizda">Hakkımızda</a>
         <a href="#yorumlar">Yorumlar</a>
-        <a href="#iletisim">İletişim</a>
+        <a href="iletisim.html">İletişim</a>
       </nav>
-      <a href="https://www.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener" class="btn btn-orange nav-cta nav-buy">🛒 %15 İndirimli Al</a>
-      <a href="#iletisim" class="btn btn-primary nav-cta">Ücretsiz Randevu</a>
+      <a href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener" class="btn btn-orange nav-cta nav-buy">🛒 %15 İndirimli Al</a>
+      <a href="iletisim.html" class="btn btn-primary nav-cta">Ücretsiz Randevu</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -98,7 +98,7 @@
             <li>İlk vücut analizi tamamen ücretsiz</li>
           </ul>
           <div class="hero-actions">
-            <a href="#iletisim" class="btn btn-primary btn-lg">
+            <a href="iletisim.html" class="btn btn-primary btn-lg">
               Ücretsiz Analiz Randevusu Al
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -266,136 +266,9 @@
             <div class="analysis-item"><span>⚡</span><p>Bazal metabolizma hızı</p></div>
             <div class="analysis-item"><span>🎂</span><p>Metabolizma yaşı</p></div>
           </div>
-          <a href="#iletisim" class="btn btn-primary">Hemen Ücretsiz Analiz Randevusu Al</a>
-          <a href="#hesaplama" class="link-more">veya önce ihtiyacınızı kendiniz hesaplayın ↓</a>
+          <a href="iletisim.html" class="btn btn-primary">Hemen Ücretsiz Analiz Randevusu Al</a>
+          <a href="hesaplama.html" class="link-more">veya önce ihtiyacınızı kendiniz hesaplayın ↓</a>
         </div>
-      </div>
-    </section>
-
-    <!-- HESAPLAMA ARACI -->
-    <section class="section" id="hesaplama">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="badge">ÜCRETSİZ HESAPLAMA ARACI</span>
-          <h2>Kalori, BMI &amp; Makro Hesaplayıcı</h2>
-          <p>Bilgilerinizi girin; vücut kitle indeksinizi, günlük kalori ihtiyacınızı ve hedefinize uygun makro dağılımınızı anında görün.</p>
-        </div>
-        <div class="calc-grid reveal">
-          <form class="calc-form" id="calcForm">
-            <h3>Bilgilerinizi Girin</h3>
-            <div class="form-group">
-              <label>Cinsiyet</label>
-              <div class="seg">
-                <input type="radio" name="cgender" id="gFemale" value="female" checked>
-                <label for="gFemale">👩 Kadın</label>
-                <input type="radio" name="cgender" id="gMale" value="male">
-                <label for="gMale">👨 Erkek</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cage">Yaş</label>
-                <input type="number" id="cage" min="12" max="90" placeholder="Örn. 32" required>
-              </div>
-              <div class="form-group">
-                <label for="cheight">Boy (cm)</label>
-                <input type="number" id="cheight" min="120" max="230" placeholder="Örn. 170" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cweight">Kilo (kg)</label>
-                <input type="number" id="cweight" min="30" max="250" step="0.1" placeholder="Örn. 78" required>
-              </div>
-              <div class="form-group">
-                <label for="cactivity">Aktivite Düzeyi</label>
-                <select id="cactivity">
-                  <option value="1.2">Hareketsiz (masa başı)</option>
-                  <option value="1.375" selected>Az hareketli (haftada 1-3 gün yürüyüş)</option>
-                  <option value="1.55">Orta düzey (haftada 3-5 gün spor)</option>
-                  <option value="1.725">Çok aktif (haftada 6-7 gün spor)</option>
-                  <option value="1.9">Atlet / ağır fiziksel iş</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Hedefiniz</label>
-              <div class="seg seg-3">
-                <input type="radio" name="cgoal" id="goalLose" value="lose" checked>
-                <label for="goalLose">Kilo Verme</label>
-                <input type="radio" name="cgoal" id="goalKeep" value="keep">
-                <label for="goalKeep">Koruma</label>
-                <input type="radio" name="cgoal" id="goalGain" value="gain">
-                <label for="goalGain">Kilo Alma</label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">
-              Hesapla
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
-            </button>
-          </form>
-
-          <div class="calc-results" aria-live="polite">
-            <div class="calc-placeholder" id="calcPlaceholder">
-              <span>📊</span>
-              <p>Soldaki formu doldurup <strong>Hesapla</strong>'ya basın; kişisel sonuçlarınız burada görünecek.</p>
-            </div>
-            <div class="calc-output" id="calcOutput" hidden>
-              <div class="res-card">
-                <div class="res-bmi-head">
-                  <div>
-                    <small>Vücut Kitle İndeksi (BMI)</small>
-                    <strong class="res-big" id="rBmi">–</strong>
-                  </div>
-                  <span class="bmi-chip" id="rBmiCat">–</span>
-                </div>
-                <div class="bmi-scale"><i class="bmi-marker" id="bmiMarker"></i></div>
-                <div class="bmi-labels"><span>Zayıf</span><span>Normal</span><span>Fazla Kilolu</span><span>Obez</span></div>
-              </div>
-              <div class="res-mini-row">
-                <div class="res-mini">
-                  <small>Bazal Metabolizma<br>(BMR)</small>
-                  <strong><span id="rBmr">–</span> kcal</strong>
-                </div>
-                <div class="res-mini">
-                  <small>Günlük Harcama<br>(TDEE)</small>
-                  <strong><span id="rTdee">–</span> kcal</strong>
-                </div>
-                <div class="res-mini res-target">
-                  <small id="rGoalLabel">Hedef Kalori</small>
-                  <strong><span id="rGoal">–</span> kcal</strong>
-                </div>
-              </div>
-              <div class="res-card">
-                <h4>Günlük Makro Dağılımınız</h4>
-                <div class="macro-flex">
-                  <div class="macro-chart"><canvas id="macroChart"></canvas></div>
-                  <ul class="macro-legend">
-                    <li><i class="dot dot-p"></i> Protein <strong id="rProt">–</strong></li>
-                    <li><i class="dot dot-c"></i> Karbonhidrat <strong id="rCarb">–</strong></li>
-                    <li><i class="dot dot-f"></i> Yağ <strong id="rFat">–</strong></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="res-mini-row res-mini-row-2">
-                <div class="res-mini">
-                  <small>İdeal Kilo Aralığınız</small>
-                  <strong id="rIdeal">–</strong>
-                </div>
-                <div class="res-mini">
-                  <small>Günlük Su İhtiyacınız</small>
-                  <strong id="rWater">–</strong>
-                </div>
-              </div>
-              <p class="res-note">🎂 Metabolizma yaşınız ve yağ/kas oranınız ancak cihazla ölçülebilir — merkezimizde <strong>ücretsiz vücut analizi</strong> ile ölçüyoruz.</p>
-              <button class="btn btn-primary btn-block" id="waShare" type="button">
-                Sonuçlarımı WhatsApp'tan Gönder
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <p class="calc-disclaimer reveal">* Bu araç Mifflin-St Jeor formülünü kullanır ve yalnızca bilgilendirme amaçlıdır; tıbbi tavsiye yerine geçmez. Kişiye özel programınız için ücretsiz vücut analizi randevusu almanızı öneririz.</p>
       </div>
     </section>
 
@@ -455,7 +328,7 @@
                 <li>WhatsApp üzerinden günlük destek</li>
                 <li>Alışkanlık koçluğu</li>
               </ul>
-              <a href="#iletisim" class="btn btn-outline">Bilgi Al</a>
+              <a href="iletisim.html" class="btn btn-outline">Bilgi Al</a>
             </div>
           </article>
           <article class="program-card reveal">
@@ -471,7 +344,7 @@
                 <li>Aylık hedef ve ölçüm takibi</li>
                 <li>Antrenman dostu beslenme düzeni</li>
               </ul>
-              <a href="#iletisim" class="btn btn-outline">Bilgi Al</a>
+              <a href="iletisim.html" class="btn btn-outline">Bilgi Al</a>
             </div>
           </article>
           <article class="program-card reveal">
@@ -487,7 +360,7 @@
                 <li>Protein ihtiyacı hesaplama</li>
                 <li>Yarışma/hedef dönemi planlaması</li>
               </ul>
-              <a href="#iletisim" class="btn btn-outline">Bilgi Al</a>
+              <a href="iletisim.html" class="btn btn-outline">Bilgi Al</a>
             </div>
           </article>
         </div>
@@ -592,7 +465,7 @@
             verirsiniz; ürünler orijinal ambalajında kargoyla adresinize teslim edilir. Bu bağlantı
             üzerinden yapacağınız alışverişlerde ürünleri <strong>%15 indirimli</strong> alırsınız.
           </p>
-          <a class="btn btn-orange btn-lg" href="https://www.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">🛒 %15 İndirimli Satın Al — Resmi Mağaza ↗</a>
+          <a class="btn btn-orange btn-lg" href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">🛒 %15 İndirimli Satın Al — Resmi Mağaza ↗</a>
           <div class="satin-guven">
             <span>🔒 Resmi Herbalife altyapısında güvenli ödeme</span>
             <span>🚚 Kargoyla adresinize teslim</span>
@@ -726,97 +599,6 @@
       </div>
     </section>
 
-    <!-- İLETİŞİM -->
-    <section class="section" id="iletisim">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="badge">İLETİŞİM</span>
-          <h2>Bize ulaşın, sizi bekliyoruz!</h2>
-          <p>Formu doldurun, WhatsApp üzerinden anında dönüş yapalım — ya da doğrudan arayın.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <div class="contact-card">
-              <span class="contact-icon">📍</span>
-              <div>
-                <strong>Adres</strong>
-                <p>Turgut Özal Mah. 2125. Cadde<br>İntro Plaza No: 11, Batıkent / ANKARA<br>
-                <a href="https://maps.app.goo.gl/sHNbhLqa1jsMDpMFA" target="_blank" rel="noopener">Haritada aç ↗</a></p>
-              </div>
-            </div>
-            <div class="contact-card">
-              <span class="contact-icon">📞</span>
-              <div>
-                <strong>Telefon</strong>
-                <p><a href="tel:+905550070269">0 555 007 02 69</a></p>
-              </div>
-            </div>
-            <div class="contact-card">
-              <span class="contact-icon">💬</span>
-              <div>
-                <strong>WhatsApp</strong>
-                <p><a href="https://wa.me/905550070269" target="_blank" rel="noopener">Hemen mesaj gönderin</a></p>
-              </div>
-            </div>
-            <div class="contact-card">
-              <span class="contact-icon">🕐</span>
-              <div>
-                <strong>Çalışma Saatleri</strong>
-                <p>Randevu sistemiyle çalışıyoruz;<br>gelmeden önce lütfen arayın 🙏</p>
-              </div>
-            </div>
-            <div class="contact-card">
-              <span class="contact-icon">📸</span>
-              <div>
-                <strong>Instagram</strong>
-                <p><a href="https://www.instagram.com/lokasyon.simsek/" target="_blank" rel="noopener">@lokasyon.simsek</a></p>
-              </div>
-            </div>
-          </div>
-          <form class="contact-form reveal" id="contactForm">
-            <h3>Ücretsiz Randevu Formu</h3>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">Adınız Soyadınız *</label>
-                <input type="text" id="fname" name="fname" placeholder="Adınız Soyadınız" required>
-              </div>
-              <div class="form-group">
-                <label for="fphone">Telefonunuz *</label>
-                <input type="tel" id="fphone" name="fphone" placeholder="05__ ___ __ __" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="fservice">İlgilendiğiniz Hizmet</label>
-              <select id="fservice" name="fservice">
-                <option value="Ücretsiz Vücut Analizi" selected>Ücretsiz Vücut Analizi</option>
-                <option value="Kilo Verme">Kilo Verme</option>
-                <option value="Kilo Alma">Kilo Alma</option>
-                <option value="Cilt Bakımı">Cilt Bakımı</option>
-                <option value="Sporcu Beslenmesi">Sporcu Beslenmesi</option>
-                <option value="Diğer">Diğer</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="fmsg">Mesajınız</label>
-              <textarea id="fmsg" name="fmsg" rows="4" placeholder="Hedefinizden kısaca bahsedin (isteğe bağlı)"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">
-              WhatsApp ile Gönder
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <p class="form-note">Form, mesajınızı hazırlayıp WhatsApp üzerinden bize iletir. Bilgileriniz üçüncü kişilerle paylaşılmaz.</p>
-          </form>
-        </div>
-        <div class="map-wrap reveal">
-          <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sVizyon+Lokasyon+%C5%9Eim%C5%9Fek+Bat%C4%B1kent+Ankara" loading="lazy" title="Vizyon Lokasyon Şimşek konumu — Turgut Özal Mah. 2125. Sk. No:11, Batıkent/Ankara" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-          <div class="map-actions">
-            <span>📍 İntro Plaza, Batıkent — kapımız size her zaman açık!</span>
-            <a class="btn btn-primary" href="https://maps.app.goo.gl/sHNbhLqa1jsMDpMFA" target="_blank" rel="noopener">Yol Tarifi Al</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -845,15 +627,15 @@
           <li><a href="#anasayfa">Ana Sayfa</a></li>
           <li><a href="#hizmetler">Hizmetler</a></li>
           <li><a href="#vucut-analizi">Vücut Analizi</a></li>
-          <li><a href="#hesaplama">Hesaplama Aracı</a></li>
+          <li><a href="hesaplama.html">Hesaplama Aracı</a></li>
           <li><a href="urunler.html">Herbalife Ürünleri</a></li>
-          <li><a href="https://www.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">%15 İndirimli Satın Al</a></li>
+          <li><a href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">%15 İndirimli Satın Al</a></li>
           <li><a href="tarifler.html">Tarifler</a></li>
           <li><a href="makaleler.html">Makaleler</a></li>
           <li><a href="urun-sss.html">Ürün Güvenliği S.S.S.</a></li>
           <li><a href="#is-firsati">İş Fırsatı</a></li>
           <li><a href="#sss">Sık Sorulan Sorular</a></li>
-          <li><a href="#iletisim">İletişim</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -895,8 +677,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
   </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/calculator.js"></script>
 </body>
 </html>

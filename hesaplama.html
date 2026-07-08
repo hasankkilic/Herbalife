@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalori, BMI & Makro Hesaplayıcı — Ücretsiz | LokasyON Şimşek</title>
+  <meta name="description" content="Ücretsiz kalori hesaplayıcı: Mifflin-St Jeor formülüyle BMR, TDEE, BMI, ideal kilo ve hedefinize uygun makro dağılımınızı anında öğrenin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white' stroke='%2378be20' stroke-width='4'/%3E%3Cpath d='M50 12 C32 12 18 26 18 44 C18 60 34 75 46 86 C48 88 52 88 54 86 C66 75 82 60 82 44 C82 26 68 12 50 12 Z' fill='none' stroke='%23222222' stroke-width='6'/%3E%3Cpath d='M32 32 C43 30 50 38 49 48 C38 49 31 42 32 32 Z' fill='%2378be20'/%3E%3Cpath d='M68 30 C57 29 51 36 52 46 C63 47 69 40 68 30 Z' fill='%232e7d32'/%3E%3C/svg%3E">
+</head>
+<body data-sayfa="hesaplama">
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+905550070269" class="topbar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0&nbsp;555&nbsp;007&nbsp;02&nbsp;69</span>
+        </a>
+        <span class="topbar-item topbar-hours">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Gelmeden önce lütfen arayın</span>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-note">✨ İlk vücut analizi ücretsiz!</span>
+        <a href="https://www.instagram.com/lokasyon.simsek/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 100 100"><path d="M50 8 C31 8 15 24 15 43 C15 61 33 78 46 90 C48.4 92 51.6 92 54 90 C67 78 85 61 85 43 C85 24 69 8 50 8 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/><path d="M31 31 C42 29 50 37 49 48 C38 49 30 42 31 31 Z" fill="#78be20"/><path d="M69 29 C58 28 51 36 52 47 C63 48 70 40 69 29 Z" fill="#2e7d32"/><path d="M50 66 C49 57 54 50 63 51 C64 60 58 66 50 66 Z" fill="#4a9427"/></svg>
+        </span>
+        <span class="brand-text">Lokasy<em>ON</em> Şimşek</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="index.html#hizmetler">Hizmetler</a>
+        <a href="hesaplama.html">Hesaplama</a>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" type="button">Herbalife <span class="drop-ok">▾</span></button>
+          <div class="nav-drop-menu">
+            <a href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener">🛒 %15 İndirimli Satın Al ↗</a>
+            <a href="urunler.html">📦 Ürünler</a>
+            <a href="tarifler.html">🥤 Tarifler</a>
+            <a href="makaleler.html">📖 Makaleler</a>
+            <a href="urun-sss.html">🛡️ Ürün Güvenliği S.S.S.</a>
+          </div>
+        </div>
+        <a href="index.html#is-firsati">İş Fırsatı</a>
+        <a href="index.html#yorumlar">Yorumlar</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+      <a href="https://tr.mypro2col.com/tr-TR/Pro2cool-lokasyonsimsek" target="_blank" rel="noopener" class="btn btn-orange nav-cta nav-buy">🛒 %15 İndirimli Al</a>
+      <a href="iletisim.html" class="btn btn-primary nav-cta">Ücretsiz Randevu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+<!-- HESAPLAMA ARACI -->
+    <section class="section" id="hesaplama">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="badge">ÜCRETSİZ HESAPLAMA ARACI</span>
+          <h2>Kalori, BMI &amp; Makro Hesaplayıcı</h2>
+          <p>Bilgilerinizi girin; vücut kitle indeksinizi, günlük kalori ihtiyacınızı ve hedefinize uygun makro dağılımınızı anında görün.</p>
+        </div>
+        <div class="calc-grid reveal">
+          <form class="calc-form" id="calcForm">
+            <h3>Bilgilerinizi Girin</h3>
+            <div class="form-group">
+              <label>Cinsiyet</label>
+              <div class="seg">
+                <input type="radio" name="cgender" id="gFemale" value="female" checked>
+                <label for="gFemale">👩 Kadın</label>
+                <input type="radio" name="cgender" id="gMale" value="male">
+                <label for="gMale">👨 Erkek</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cage">Yaş</label>
+                <input type="number" id="cage" min="12" max="90" placeholder="Örn. 32" required>
+              </div>
+              <div class="form-group">
+                <label for="cheight">Boy (cm)</label>
+                <input type="number" id="cheight" min="120" max="230" placeholder="Örn. 170" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cweight">Kilo (kg)</label>
+                <input type="number" id="cweight" min="30" max="250" step="0.1" placeholder="Örn. 78" required>
+              </div>
+              <div class="form-group">
+                <label for="cactivity">Aktivite Düzeyi</label>
+                <select id="cactivity">
+                  <option value="1.2">Hareketsiz (masa başı)</option>
+                  <option value="1.375" selected>Az hareketli (haftada 1-3 gün yürüyüş)</option>
+                  <option value="1.55">Orta düzey (haftada 3-5 gün spor)</option>
+                  <option value="1.725">Çok aktif (haftada 6-7 gün spor)</option>
+                  <option value="1.9">Atlet / ağır fiziksel iş</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Hedefiniz</label>
+              <div class="seg seg-3">
+                <input type="radio" name="cgoal" id="goalLose" value="lose" checked>
+                <label for="goalLose">Kilo Verme</label>
+                <input type="radio" name="cgoal" id="goalKeep" value="keep">
+                <label for="goalKeep">Koruma</label>
+                <input type="radio" name="cgoal" id="goalGain" value="gain">
+                <label for="goalGain">Kilo Alma</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              Hesapla
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+            </button>
+          </form>
+
+          <div class="calc-results" aria-live="polite">
+            <div class="calc-placeholder" id="calcPlaceholder">
+              <span>📊</span>
+              <p>Soldaki formu doldurup <strong>Hesapla</strong>'ya basın; kişisel sonuçlarınız burada görünecek.</p>
+            </div>
+            <div class="calc-output" id="calcOutput" hidden>
+              <div class="res-card">
+                <div class="res-bmi-head">
+                  <div>
+                    <small>Vücut Kitle İndeksi (BMI)</small>
+                    <strong class="res-big" id="rBmi">–</strong>
+                  </div>
+                  <span class="bmi-chip" id="rBmiCat">–</span>
+                </div>
+                <div class="bmi-scale"><i class="bmi-marker" id="bmiMarker"></i></div>
+                <div class="bmi-labels"><span>Zayıf</span><span>Normal</span><span>Fazla Kilolu</span><span>Obez</span></div>
+              </div>
+              <div class="res-mini-row">
+                <div class="res-mini">
+                  <small>Bazal Metabolizma<br>(BMR)</small>
+                  <strong><span id="rBmr">–</span> kcal</strong>
+                </div>
+                <div class="res-mini">
+                  <small>Günlük Harcama<br>(TDEE)</small>
+                  <strong><span id="rTdee">–</span> kcal</strong>
+                </div>
+                <div class="res-mini res-target">
+                  <small id="rGoalLabel">Hedef Kalori</small>
+                  <strong><span id="rGoal">–</span> kcal</strong>
+                </div>
+              </div>
+              <div class="res-card">
+                <h4>Günlük Makro Dağılımınız</h4>
+                <div class="macro-flex">
+                  <div class="macro-chart"><canvas id="macroChart"></canvas></div>
+                  <ul class="macro-legend">
+                    <li><i class="dot dot-p"></i> Protein <strong id="rProt">–</strong></li>
+                    <li><i class="dot dot-c"></i> Karbonhidrat <strong id="rCarb">–</strong></li>
+                    <li><i class="dot dot-f"></i> Yağ <strong id="rFat">–</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="res-mini-row res-mini-row-2">
+                <div class="res-mini">
+                  <small>İdeal Kilo Aralığınız</small>
+                  <strong id="rIdeal">–</strong>
+                </div>
+                <div class="res-mini">
+                  <small>Günlük Su İhtiyacınız</small>
+                  <strong id="rWater">–</strong>
+                </div>
+              </div>
+              <p class="res-note">🎂 Metabolizma yaşınız ve yağ/kas oranınız ancak cihazla ölçülebilir — merkezimizde <strong>ücretsiz vücut analizi</strong> ile ölçüyoruz.</p>
+              <button class="btn btn-primary btn-block" id="waShare" type="button">
+                Sonuçlarımı WhatsApp'tan Gönder
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="calc-disclaimer reveal">* Bu araç Mifflin-St Jeor formülünü kullanır ve yalnızca bilgilendirme amaçlıdır; tıbbi tavsiye yerine geçmez. Kişiye özel programınız için ücretsiz vücut analizi randevusu almanızı öneririz.</p>
+      </div>
+    </section>
+
+    <!-- BILIMSEL ARKA PLAN -->
+    <section class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <span class="badge">BİLİMSEL ARKA PLAN</span>
+          <h2>Bu değerler ne anlama geliyor?</h2>
+          <p>Hesaplayıcımız, beslenme biliminde yaygın olarak kullanılan <strong>Mifflin-St Jeor</strong> denklemini temel alır. Sonuçlarınızı doğru yorumlamanız için kısa bir rehber:</p>
+        </div>
+        <div class="about-points reveal">
+          <div class="about-point"><span>⚖️</span><div><strong>BMI — Vücut Kitle İndeksi</strong><small>Kilonuzun boyunuza göre değerlendirilmesini sağlayan uluslararası ölçüttür; 18,5 – 24,9 aralığı "normal" kabul edilir.</small></div></div>
+          <div class="about-point"><span>🔥</span><div><strong>BMR — Bazal Metabolizma Hızı</strong><small>Vücudunuzun tam dinlenme hâlinde — nefes, dolaşım ve hücre yenilenmesi için — harcadığı günlük enerjidir.</small></div></div>
+          <div class="about-point"><span>⚡</span><div><strong>TDEE — Günlük Toplam Enerji</strong><small>BMR'nizin aktivite düzeyinizle çarpılmış hâlidir; gün boyunca gerçekte harcadığınız tahmini kaloriyi gösterir.</small></div></div>
+          <div class="about-point"><span>🥗</span><div><strong>Makro Dağılımı</strong><small>Hedef kalorinizin protein, karbonhidrat ve yağ olarak dengeli bölünmesidir; beslenme programınızın iskeletini oluşturur.</small></div></div>
+        </div>
+        <div class="center reveal">
+          <p class="muted-note" style="margin-bottom:1.2rem">Bu sonuçlar genel bir başlangıç noktasıdır — vücut yağ oranınız, kas kütleniz ve metabolizma yaşınız ancak cihazla yapılan ölçümle netleşir.</p>
+          <a class="btn btn-primary btn-lg" href="iletisim.html">📊 Ücretsiz Vücut Analizi Randevusu Alın</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="disclaimer">
+          Bu web sitesi Bağımsız bir Herbalife Üyesi tarafından işletilmektedir; Herbalife International tarafından işletilmemektedir. Buradaki bilgiler tıbbi tavsiye niteliği taşımaz; ürünler herhangi bir hastalığı teşhis, tedavi veya önleme amacı taşımaz. Sağlık durumunuzla ilgili sorularınız için lütfen doktorunuza danışın.
+        </p>
+        <p class="copyright">© <span id="year">2026</span> LokasyON Şimşek — Tüm hakları saklıdır. · <a href="index.html">← Ana Sayfaya Dön</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/905550070269?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/kaynaklar.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>

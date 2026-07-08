@@ -147,23 +147,6 @@ fetch("data/yorumlar.json?v=" + Date.now(), { cache: "no-store" })
   })
   .catch(() => {});
 
-/* ---------- Randevu formu → WhatsApp ---------- */
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("fname").value.trim();
-  const phone = document.getElementById("fphone").value.trim();
-  const service = document.getElementById("fservice").value;
-  const msg = document.getElementById("fmsg").value.trim();
-
-  let text = `Merhaba, web sitenizden yazıyorum.\n\n`;
-  text += `👤 Ad Soyad: ${name}\n`;
-  text += `📞 Telefon: ${phone}\n`;
-  text += `🎯 İlgilendiğim hizmet: ${service}\n`;
-  if (msg) text += `📝 Mesaj: ${msg}\n`;
-  text += `\nRandevu almak istiyorum.`;
-
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
-});
-
 /* ---------- Yıl ---------- */
+/* (Randevu formu iletisim.html sayfasına taşındı; kodu js/kaynaklar.js içindedir.) */
 document.getElementById("year").textContent = new Date().getFullYear();

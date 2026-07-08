@@ -10,6 +10,8 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 | `js/calculator.js` | Kalori/BMI/makro hesaplama aracı |
 | `data/yorumlar.json` | Üye yorumları (admin panelinden yönetilir) |
 | `admin.html` + `js/admin.js` | Yorum yönetim paneli |
+| `hesaplama.html` + `js/calculator.js` | Kalori/BMI/makro hesaplayıcı sayfası |
+| `iletisim.html` | İletişim, randevu formu ve harita sayfası |
 | `urunler.html` + `js/urunler.js` + `data/urunler.json` | Herbalife ürün kataloğu sayfası |
 | `tarifler.html`, `makaleler.html`, `urun-sss.html` + `js/kaynaklar.js` | Resmi tarifler, makaleler ve ürün güvenliği S.S.S. sayfaları |
 | `data/tarifler.json`, `data/makaleler.json`, `data/sss.json` | Bu sayfaların içerikleri (resmi siteden) |
