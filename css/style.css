@@ -135,6 +135,7 @@ ul { list-style: none; }
   transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .navbar.scrolled { box-shadow: var(--shadow-sm); border-bottom-color: var(--line); }
+.navbar .container { width: min(1400px, 96%); }
 
 .nav-inner {
   display: flex;
@@ -1495,19 +1496,32 @@ ul { list-style: none; }
 .satin-serit small { display: block; font-weight: 500; color: var(--muted); margin-top: 0.15rem; }
 
 .nav-buy { white-space: nowrap; }
-@media (max-width: 1280px) { .nav-buy { display: none; } }
+.nav-cta { white-space: nowrap; }
+@media (max-width: 1340px) { .nav-buy { display: none; } }
 
-/* İş fırsatı bandı */
-.is-band {
-  background:
-    radial-gradient(500px 260px at 85% 30%, rgba(255, 255, 255, 0.1), transparent),
-    linear-gradient(135deg, var(--green-deep) 0%, #2c5e2e 100%);
-  color: #fff;
-  padding: 3.2rem 0;
+/* İş fırsatı bölümü */
+.is-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
 }
-.is-band .cta-inner p { color: #cfe6b8; max-width: 60ch; }
-.is-band .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
-.is-band .btn-ghost:hover { border-color: #fff; color: #fff; }
+.is-item {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.4rem;
+  text-align: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.is-item:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.12); }
+.is-item span { font-size: 2.1rem; display: block; margin-bottom: 0.55rem; }
+.is-item strong { display: block; color: #fff; font-size: 1.02rem; margin-bottom: 0.4rem; }
+.is-item small { color: #cfe6b8; font-size: 0.85rem; line-height: 1.55; display: block; }
+.section-green .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+.section-green .btn-ghost:hover { border-color: #fff; color: #fff; }
+@media (max-width: 1024px) { .is-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .is-grid { grid-template-columns: 1fr; } }
 
 @media (max-width: 1024px) {
   .icerik-grid { grid-template-columns: repeat(2, 1fr); }
