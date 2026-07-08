@@ -10,6 +10,8 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 | `js/calculator.js` | Kalori/BMI/makro hesaplama aracı |
 | `data/yorumlar.json` | Üye yorumları (admin panelinden yönetilir) |
 | `admin.html` + `js/admin.js` | Yorum yönetim paneli |
+| `urunler.html` + `js/urunler.js` + `data/urunler.json` | Herbalife ürün kataloğu sayfası |
+| `araclar/urunler-guncelle.py` | Ürün kataloğunu resmi siteden yeniden çekme betiği |
 
 ## 1. Güncel bilgiler (işlendi ✅)
 
@@ -27,6 +29,7 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 - **Üye yorumları:** Kod bilgisi GEREKMEZ — sitedeki `admin.html` sayfasını açın (ör. `siteadresi/admin.html`). İlk kullanımda sayfadaki adımları izleyerek GitHub erişim anahtarı oluşturup yapıştırın; sonrasında yorum ekleme/silme/düzenleme/sıralama tamamen paneldendir. "Kaydet ve Yayınla" düğmesi değişikliği doğrudan GitHub'a işler, site 1-2 dakikada güncellenir. (Yorumları yayınlarken üyeden izin almayı unutmayın.)
 - **Fotoğraflar:** Şu an Unsplash'ten ücretsiz stok fotoğraflar kullanılıyor. Kendi fotoğraflarınızı kullanmak için proje içine `img` klasörü açıp fotoğrafları oraya koyun, sonra `index.html` içindeki `https://images.unsplash.com/...` adreslerini `img/dosyaadi.jpg` ile değiştirin. **Kendi mekân ve etkinlik fotoğraflarınız siteyi çok daha inandırıcı yapar — şiddetle tavsiye edilir.**
 - **Renkler:** `css/style.css` dosyasının en üstündeki `:root` bölümünden tüm renkleri tek yerden değiştirebilirsiniz.
+- **Ürün kataloğu:** `urunler.html` sayfası, resmi Herbalife Türkiye sitesindeki tüm ürünleri (ad, açıklama, görsel) `data/urunler.json` dosyasından gösterir. Herbalife kataloğa ürün ekleyip çıkardıkça güncellemek için bilgisayarda `python araclar/urunler-guncelle.py` çalıştırıp değişikliği GitHub'a gönderin. Her üründeki "Bilgi / Sipariş" düğmesi ürün adıyla hazır WhatsApp mesajı açar.
 - **Hesaplama aracı:** "Hesaplama" bölümü ziyaretçinin BMI, günlük kalori (Mifflin-St Jeor formülü) ve makro ihtiyacını hesaplar; "Sonuçlarımı WhatsApp'tan Gönder" butonu sonuçları doğrudan size iletir — yani araç aynı zamanda müşteri kazanma kanalıdır. Formüller `js/calculator.js` içindedir; grafik için Chart.js internetten (CDN) yüklenir, ekstra kurulum gerekmez.
 
 ## 3. Yayın durumu
