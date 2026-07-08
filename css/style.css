@@ -95,6 +95,13 @@ ul { list-style: none; }
 .btn-white { background: #fff; color: var(--green-deep); box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18); }
 .btn-white:hover { box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24); }
 
+.btn-orange {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(245, 130, 31, 0.38);
+}
+.btn-orange:hover { box-shadow: 0 12px 28px rgba(245, 130, 31, 0.5); }
+
 .btn-lg { padding: 1em 2em; font-size: 1.04rem; }
 .btn-block { width: 100%; }
 
@@ -1428,6 +1435,67 @@ ul { list-style: none; }
 .neden-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .neden-item strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--green-dark); margin-bottom: 0.3rem; }
 .neden-item span { font-size: 0.88rem; color: var(--muted); line-height: 1.45; display: block; }
+
+/* Online satın alma bölümü */
+.satin-kutu {
+  background:
+    radial-gradient(420px 200px at 85% 15%, rgba(255, 255, 255, 0.55), transparent),
+    linear-gradient(135deg, #fff3e6 0%, #ffe8cf 100%);
+  border: 1px solid #ffdfbd;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+.satin-kutu .satin-ikon { font-size: 2.6rem; display: block; margin-bottom: 0.6rem; }
+.satin-kutu h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+.satin-kutu h2 em { font-style: normal; color: var(--orange-dark); }
+.satin-kutu > p {
+  color: var(--muted);
+  max-width: 62ch;
+  margin: 0 auto 1.6rem;
+  font-size: 0.97rem;
+}
+.satin-kutu .btn-lg { font-size: 1.08rem; }
+.satin-guven {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+}
+.satin-guven span {
+  background: #fff;
+  border: 1px solid #ffdfbd;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5em 1.1em;
+}
+
+/* ürünler sayfası satın alma şeridi */
+.satin-serit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #fff3e6 0%, #ffe8cf 100%);
+  border: 1px solid #ffdfbd;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.5rem;
+  margin-bottom: 1.6rem;
+}
+.satin-serit p { font-size: 0.93rem; font-weight: 600; }
+.satin-serit small { display: block; font-weight: 500; color: var(--muted); margin-top: 0.15rem; }
+
+.nav-buy { white-space: nowrap; }
+@media (max-width: 1280px) { .nav-buy { display: none; } }
 
 /* İş fırsatı bandı */
 .is-band {
