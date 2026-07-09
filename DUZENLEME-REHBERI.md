@@ -40,12 +40,12 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 
 ## 3. Yayın durumu
 
-Site **GitHub Pages ile yayında**: https://hasankkilic.github.io/Herbalife/
+Site **GitHub Pages ile yayında**: https://lokasyonsimsek.com/
 
 - `main` dalına gönderilen (push edilen) her değişiklik 1-2 dakika içinde otomatik yayınlanır.
-- Yorum paneli: https://hasankkilic.github.io/Herbalife/admin.html — kullanımı için `YORUM-EKLEME-REHBERI.md` dosyasına bakın.
-- İleride kendi alan adınızı (ör. `lokasyonsimsek.com`) bağlamak isterseniz: repo → Settings → Pages → Custom domain.
+- Yorum paneli: https://lokasyonsimsek.com/admin.html — kullanımı için `YORUM-EKLEME-REHBERI.md` dosyasına bakın.
+- Alan adı `lokasyonsimsek.com` Namecheap'ten alındı ve GitHub Pages'e bağlandı (DNS: 4 A kaydı + www CNAME). Eski `hasankkilic.github.io/Herbalife` adresi otomatik olarak yeni adrese yönlenir.
 
 ## 4. Yasal not
 
-Footer'daki "Bağımsız Herbalife Üyesi" açıklaması bilinçli olarak eklendi — Herbalife üyelerinin kendi sitelerinde bu tür bir açıklama bulundurması beklenir ve siteye profesyonellik/güvenilirlik katar. Silmemenizi öneririz. Ayrıca "Herbalife" logo ve görsellerini resmi izin olmadan kullanmamaya dikkat edin; bu site bu yüzden kendi markası ("Şimşek Wellness") üzerine kuruldu.
+Footer'daki "Bağımsız Herbalife Üyesi" açıklaması bilinçli olarak eklendi — Herbalife üyelerinin kendi sitelerinde bu tür bir açıklama bulundurması beklenir ve siteye profesyonellik/güvenilirlik katar. Silmemenizi öneririz. Ayrıca "Herbalife" logo ve görsellerini resmi izin olmadan kullanmamaya dikkat edin; bu site bu yüzden kendi markası ("LokasyON Şimşek") üzerine kuruldu.

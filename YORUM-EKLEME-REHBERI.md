@@ -7,8 +7,8 @@ Kod bilgisi gerekmez; her şey panel üzerinden yapılır.
 
 | Ne | Adres |
 |---|---|
-| 🌐 Site | https://hasankkilic.github.io/Herbalife/ |
-| ⚙️ Yorum Paneli | https://hasankkilic.github.io/Herbalife/admin.html |
+| 🌐 Site | https://lokasyonsimsek.com/ |
+| ⚙️ Yorum Paneli | https://lokasyonsimsek.com/admin.html |
 
 > Panel adresini telefonunuzun/bilgisayarınızın yer imlerine (favorilere) ekleyin.
 > Bu adresi müşterilerle paylaşmayın.
@@ -47,7 +47,7 @@ Panelin kayıt yapabilmesi için GitHub'dan ücretsiz bir "erişim anahtarı" al
 
 ## ➕ Yeni yorum böyle eklenir
 
-1. Paneli açın: https://hasankkilic.github.io/Herbalife/admin.html
+1. Paneli açın: https://lokasyonsimsek.com/admin.html
 2. **"+ Yeni Yorum Ekle"** düğmesine basın; listenin sonuna boş bir kart eklenir.
 3. Kartı doldurun:
    - **Ad Soyad:** Üyenin adı + soyad baş harfi yazın, örn. `Ayşe K.` *(gizlilik için soyadı kısaltın)*
