@@ -23,7 +23,7 @@ Bu site 3 dosyadan oluşur, hiçbir kurulum/program gerektirmez:
 Şu bilgiler siteye işlenmiş durumdadır — değişirse aşağıdaki gibi güncelleyin:
 
 - **Telefon / WhatsApp: 0555 007 02 69** — değişirse `js/main.js` en üstündeki `WHATSAPP_NUMBER` satırını ve `index.html` içinde `905550070269` ile `0 555 007 02 69` yazan yerleri (Ctrl+H ile) değiştirin.
-- **Adres: Turgut Özal Mah. 2125. Cadde İntro Plaza No: 11, Batıkent/ANKARA** — değişirse `index.html` içinde aratıp değiştirin; İletişim bölümündeki Google Haritalar kutusunun adresi de `maps?q=...` satırındadır.
+- **Adres: Turgut Özal Mah. 2128. Sk. No: 2B (İntro Plaza), Batıkent/ANKARA** — değişirse `iletisim.html` ve `index.html` (footer) içinde aratıp değiştirin. Haritadaki işaret işletmenin Google kaydına bağlıdır; adres metni değişse de işaret Google Business Profile üzerinden yönetilir.
 - **Marka: LokasyON Şimşek** — logo, menü ve footer'da SVG olarak çizilidir; renkleri `css/style.css` üstündeki değişkenlerden ayarlanır.
 - **Çalışma düzeni:** Sabit saat yerine "Gelmeden önce lütfen arayın" notu kullanılıyor.
 
