@@ -1118,5 +1118,29 @@
         "html": "<p>Sabah ve akşam temizlenmiş yüze uygulayın. Tüpe hafifçe bastırın ve göz çevresine az miktarda masaj yaparak uygulayın.</p>\n<p>Gün içinde SPF koruması kullanmayı unutmayın.</p>"
       }
     ]
+  },
+  {
+    "sku": "528K",
+    "ad": "Protein Bake Mix",
+    "kategori": "protein-destegi",
+    "aroma": "Nötr",
+    "boyut": "480 g",
+    "ozet": "Protein Bake Mix ile en sevdiğiniz atıştırmalıkları lezzetli proteinli atıştırmalıklara dönüştürün.",
+    "gorsel": "https://www.herbalife.com/assets/market-reusable-assets/emea/turkey/images/canister/pc-528K-tr.png",
+    "resmiSayfa": "https://www.herbalife.com/tr-tr/u/products/protein-bake-mix-neutral-480g-528k",
+    "sekmeler": [
+      {
+        "baslik": "Genel Bakış",
+        "html": "<p>Protein Bake Mix ile en sevdiğiniz proteinli atıştırmalıklara dönüştürün.</p>\n<p>Protein Bake Mix, dengeli bir besin profili sağlamak için özenle hazırlanmıştır; böylece fırınlanan ürünleriniz sadece harika bir tada sahip olmakla kalmaz, aynı zamanda vücudunuzu da destekler. Peynir altı suyu proteini ile formüle edilen bu karışım, aynı zamanda mineraller ve lif içerir.</p>\n<p>Nötr tadı sayesinde Protein Bake Mix, en sevdiğiniz tariflere kolayca karışır ve fırın ürünlerinizi daha yüksek proteinli alternatiflere dönüştürür. Kurabiyelerden keklere, pankeklerden waffle'lara kadar Protein Bake Mix sonsuz olasılıklar sunar.</p>\n<p>Protein Bake Mix, vücudunuzun ihtiyaçlarını desteklerden sevdiğiniz lezzetlerin tadını çıkarmanızı sağlar. Pişirmenin keyfini proteinle birleştirin ve her lokmayı günlük protein hedeflerinize ulaşma yolunda bir adım haline getirin.</p>"
+      },
+      {
+        "baslik": "Özellikler",
+        "html": "<p>Protein Bake Mix:</p>\n<ul>\n<li>Yüksek protein içerir</li>\n<li>Glutensizdir</li>\n<li>Vejetaryenler için uygundur</li>\n<li>Lif içerir</li>\n<li>Mineraller içerir</li>\n<li>Nötr tadı sayesinde çok yönlüdür</li>\n<li>İlave şeker içermez, doğal olarak şeker içerir</li>\n<li>20 porsiyon içerir</li>\n</ul>"
+      },
+      {
+        "baslik": "Nasıl kullanılır",
+        "html": "<p>Pankek yapmak için, düşük ısıda yapışmaz bir tavayı önceden ısıtın. 24 g (3 yemek kaşığı) Protein Bake Mix karışımını 30 ml (2 yemek kaşığı) yarım yağlı süt (%1,5 yağ) veya 30 ml (2 yemek kaşığı) su ile karıştırın.</p>\n<p>Karıştırdıktan sonra harcı tepsinin ortasına dökün ve keki istediğiniz kalınlıkta yayın.</p>\n<p>Alt kısmı altın rengi olana kadar 2-3 dakika kısık ateşte pişirin, ardından pankeki çevirin ve bu adımı diğer taraf için tekrarlayın.</p>"
+      }
+    ]
   }
 ]
