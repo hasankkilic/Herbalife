@@ -840,6 +840,30 @@
     ]
   },
   {
+    "sku": "330K",
+    "ad": "Çay ve Bitki Ekstreli Aromalı İçecek Tozu",
+    "kategori": "kafein-destegi",
+    "aroma": "Mango ve Ejder Meyvesi",
+    "boyut": "102 g",
+    "ozet": "Çay ve bitki özlerinin eşsiz bir karışımıyla formüle edilen bu düşük kalorili içeceğin her bir fincanı, 87,5 mg kafein içerir.",
+    "gorsel": "https://www.herbalife.com/assets/market-reusable-assets/emea/turkey/images/canister/pc-330k-tr.png",
+    "resmiSayfa": "https://www.herbalife.com/tr-tr/u/products/cay-bitki-ekstreli-aromali-icecek-tozu-mango-ejder-meyvesi-102g-330k",
+    "sekmeler": [
+      {
+        "baslik": "Genel Bakış",
+        "html": "<p>Çay ve Bitki Ekstreli Aromalı İçecek Tozu, siyah çay yaprağı ekstresi, yeşil çay yaprağı ekstresi, bamya çiçeği tozu ve kakule meyve ekstresinin bir karışımı ile formüle edilmiştir.</p><p>Çay ve Bitki Ekstreli Aromalı İçecek Tozu bizim özel karışımımızdır. Size destek olacak, her porsiyonu 50 miligram kafein* içeren düşük kalorili bitkisel bir içecektir.</p><p>Çay ve Bitki Ekstreli Aromalı İçecek Tozu, farklı aromalarda mevcuttur ve sıcak veya soğuk olarak tüketilebilir. Bu içeceğin hazırlanması birkaç saniye alır, böylece hareket halindeyken veya evinizin rahatlığında tüketebilirsiniz. En sevdiğiniz meyveler veya narenciye ile karıştırın ve Çay ve Bitki Ekstreli Aromalı İçecek Tozu çok yönlülüğünü keşfedin.</p><p>*<em>Tüm kaynaklardan günlük 400 mg kafein alımının aşılmaması önerilir (hamile veya emziren kadınlar için 200 mg). Tek seferde 200 mg kafein aşılmamalıdır (EFSA Journal 2015;13(5):4102. 2015).</em></p>"
+      },
+      {
+        "baslik": "Özellikler",
+        "html": "<p>Çay ve Btiki Ekstreli Aromalı İçecek Tozu:</p><ul><li>Porsiyon başına 50 mg kafein içerir*</li><li>Düşük kalorili - porsiyon başına 6 kcal*</li><li>Vegan ve vejetaryenler için uygundur</li><li>Glutensiz</li><li>Tatlandırıcı olarak steviol glikozitler içerir</li><li>60 porsiyon içerir</li></ul><p><em>*Etiketteki kullanım talimatlarına göre hazırlandığında.</em></p>"
+      },
+      {
+        "baslik": "Nasıl kullanılır",
+        "html": "<p>Her kullanımdan önce kutuyu hafifçe sallayın. ½ çay kaşığı (1,7 g) Çay ve bitki ekstreli aromalı içecek tozunu tercihinize göre, 350 ml sıcak veya soğuk suyla karıştırınız.</p>"
+      }
+    ]
+  },
+  {
     "sku": "332K",
     "ad": "Formül 1 Öğün Yerine Geçen Besleyici Shake Karışımı",
     "kategori": "protein",
